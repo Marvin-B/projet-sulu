@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <br/>
 <p align="center">
     <a href="https://sulu.io/" target="_blank">
@@ -69,3 +70,6 @@ Sulu requires a **PHP version higher or equal to 7.2** and is compatible with ev
 ## 📘&nbsp; License
 The Sulu content management system is released under the under terms of the [MIT License](LICENSE).
 .
+=======
+# projet-sulu
+>>>>>>> 2ecdbc4723197e422f2682449a12d4c30e203430
