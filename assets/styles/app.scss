@@ -1,0 +1,12 @@
+*{
+    font-family: sans-serif;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import 'variables/colors';
+@import 'components/header';

@@ -3,15 +3,15 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
 
-    <key>default</key>
+    <key>compagnies</key>
 
-    <view>pages/default</view>
+    <view>pages/compagnies</view>
     <controller>Sulu\Bundle\WebsiteBundle\Controller\DefaultController::indexAction</controller>
-    <cacheLifetime>604800</cacheLifetime>
+    <cacheLifetime>86400</cacheLifetime>
 
     <meta>
-        <title lang="en">Default</title>
-        <title lang="fr">Standard</title>
+        <title lang="en">Companies</title>
+        <title lang="fr">Compagnies</title>
     </meta>
 
     <properties>
