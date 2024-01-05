@@ -1,0 +1,81 @@
+footer{
+    background-color : $color_main;
+    color: $white;
+    padding: 0 0 2rem 0;
+    position: relative;
+    &::before{
+        background: $color_main;
+        background-image: url('/assets/images/footer/croisiland-picto.svg');
+        background-size: 4rem 4rem;
+        border-radius: 50%;
+        content: ' ';
+        display: block;
+        height: 5rem;
+        left: calc(50% - 2.5rem);
+        position: absolute;
+        top:-2.5rem;
+        width: 5rem;
+    }
+    nav{
+        background-size: 100% auto;
+        background-position-y: 15%;
+        display:flex;
+        justify-content: space-between;
+        padding: 2rem 3rem 0 3rem;
+        div{
+            display:flex;
+            flex-direction: column;
+            &.footer_title{
+                font-size: 1.25rem;
+                &::after{
+                    content:' ';
+                    display: block;
+                    width: 50px;
+                    height: 3px;
+                    background-color: $white;
+                    margin-top: .5rem;
+                }
+            }
+            &.footer_rs{
+                flex-direction: row;
+                justify-content: space-between;
+                a{
+                    transition: .2s;
+                    &:hover{
+                        transform: scale(1.4);
+                    }
+                }
+            }
+        }
+
+        ul{
+            display:flex;
+            flex-direction: column;
+            color: $color_third;
+            grid-gap: 1rem;
+            padding: 0;
+            a{
+                color: inherit;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    div{
+        &.footer_partners{
+            padding: 0 2rem;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            margin: 2rem 0;
+            font-size: .75rem;
+        }
+    }
+    p{
+        text-align: center;
+        font-size: .75rem;
+        padding: 0 2rem;
+    }
+}

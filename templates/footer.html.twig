@@ -1,5 +1,48 @@
- <footer>
-        {% block footer %}
-            <p>Copyright {{ 'now'|date('Y') }} SULU</p>
-        {% endblock %}
-    </footer>
+<footer>
+{% block footer %}
+    <nav style="background-image : url('{{asset('images/footer/footer.png')}}')">
+        <div>
+            <div class="footer_title">A propos de Croisiland</div>
+            <ul>
+                <a href="">Qui sommes-nous ?</a>
+                <a href="">Conditions générales et particulières de vente</a>
+                <a href="">Mentions légales et conditions générales d'utilisation</a>
+                <a href="">Politique de confidentialité</a>
+            </ul>
+        </div>
+        <div>
+            <div class="footer_title">Nos services</div>
+            <ul>
+            <a href="">Assurances voyage</a>
+                <a href="">Groupes et CE</a>
+                <a href="">Partenariat</a>
+            </ul>
+        </div>
+        <div>
+            <div class="footer_title">Infos pratiques</div>
+            <ul>
+                <a href="">FAQ</a>
+                <a href="">Contactez-nous</a>
+            </ul>
+        </div>
+        <div>
+            <div class="footer_title">Restons en contact</div>
+            <ul>
+                <a href="">Blog</a>
+                <a href="">La newsletter Croisiland</a>
+                <a href="">Recrutement</a>
+                <div class="footer_rs">
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <div class="footer_partners">
+        Ici, logos des partenaires ...
+    </div>
+    <p>© {{ 'now'|date('Y') }} tous droits réservés - CROISILAND est une marque de la SAS Croisières @ Compagnie au capital de 40 000€ - Savoie Technolac, Bat Alouette II,n BP 50370, 73372 Le Bourget du Lac CEDEX - RCS Chambéry 449 380 559 00038 - N°TVA Intracommunautaire : FR 90 449 380 559 - Garantie des fonds déposés APST - Assurance RCP : MMA - Immatriculation ATOUT France : IM073120013</p>
+{% endblock %}
+</footer>
