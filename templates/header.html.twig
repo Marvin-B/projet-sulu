@@ -1,0 +1,40 @@
+<header>
+        {% block header %}
+
+            <div id="infos-top-menu">
+                  <a href="{{ sulu_content_root_path() }}"><img src="https://www.croisiland.com/_imgs/logos/logo_croisiland.svg" /></a>
+                <div>
+                    <div class="tel">
+                        <a href="tel:0479265960"><i class="fa-solid fa-phone"></i>  04 79 26 59 60</a>
+                    </div>
+                    <div class="horaires">
+                        <i class="fa-regular fa-clock"></i> de 10:00 à 18:00
+                    </div>
+                    <div class="newsletter">
+                        <a href="">Je m'inscris à la <br /> <span class="newsletter_link">newsletter</span></a>
+                    </div>
+                    <div class="language"><img class="flag" src="https://flagsapi.com/FR/flat/64.png"> FR</div>
+                    <div class="pofil"><a href=""><i class="fa-regular fa-user"></i></a></div>
+                </div>
+            </div>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{{ sulu_content_root_path() }}"><i class="fa-solid fa-house"></i></a>
+                    </li>
+                    <li>
+                        <a href="{{ sulu_content_root_path() }}compagnies">Compagnies</a>
+                    </li>
+
+
+                    {% for item in sulu_navigation_root_tree('main') %}
+                        <li>
+                            <a href="{{ sulu_content_path(item.url, item.webspaceKey) }}"
+                               title="{{ item.title }}">{{ item.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        {% endblock %}
+    </header>

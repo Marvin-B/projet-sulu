@@ -14,27 +14,18 @@
         } %}
     {% endblock %}
 
-    {% block style %}{% endblock %}
+    {% block style %}
+    {% endblock %}
+
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('styles/app.scss') }}">
+        {# CDN font awesome #}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">    
+    {% endblock %}
 </head>
 <body>
-    <header>
-        {% block header %}
-            <nav>
-                <ul>
-                    <li>
-                        <a href="{{ sulu_content_root_path() }}">Homepage</a>
-                    </li>
-
-                    {% for item in sulu_navigation_root_tree('main') %}
-                        <li>
-                            <a href="{{ sulu_content_path(item.url, item.webspaceKey) }}"
-                               title="{{ item.title }}">{{ item.title }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </nav>
-        {% endblock %}
-    </header>
+    {% include 'header.html.twig' %}
 
     <form action="{{ path('sulu_search.website_search') }}" method="GET">
         <input name="q" type="text" placeholder="Search"/>
@@ -45,12 +36,9 @@
         {% block content %}{% endblock %}
     </main>
 
-    <footer>
-        {% block footer %}
-            <p>Copyright {{ 'now'|date('Y') }} SULU</p>
-        {% endblock %}
-    </footer>
+    {% include 'footer.html.twig' %}
 
     {% block javascripts %}{% endblock %}
+            {{ importmap() }}
 </body>
 </html>
