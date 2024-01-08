@@ -48,6 +48,7 @@
         "symfony/monolog-bundle": "^3.4",
         "symfony/runtime": "^6.3",
         "symfony/security-bundle": "^6.3",
+        "symfony/translation": "6.3.*",
         "symfony/twig-bundle": "^6.3",
         "symfonycasts/sass-bundle": "^0.4.0"
     },

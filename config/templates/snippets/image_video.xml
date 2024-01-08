@@ -1,0 +1,592 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>image_video</key>
+
+    <meta>
+        <title lang="en">Image et vidéo</title>
+        <title lang="fr">Image et vidéo</title>
+    </meta>
+
+    <!-- mandatory="true" ==>  required -->
+
+    <properties>
+
+        <!--<section name="general">-->
+
+            <!-- <meta>
+                <title lang="en">Général</title>
+                <title lang="fr">Général</title>
+            </meta> -->
+
+            <property name="title" colspan="4" type="text_line" mandatory="true">
+                <meta>
+                    <title lang="en">Titre</title>
+                    <title lang="fr">Titre</title>
+                </meta>
+                <tag name="sulu.node.name"/>
+            </property>
+
+            <property name="image" colspan="4" type="media_selection">
+                <meta>
+                    <title lang="en">Image</title>
+                    <title lang="fr">Image</title>
+                </meta>
+                <params>
+                    <param name="types" value="image" />
+                </params>
+                <tag name="sulu.node.name"/>
+            </property>
+
+            <property name="video" colspan="4" type="media_selection">
+                <meta>
+                    <title lang="en">Video</title>
+                    <title lang="fr">Vidéo</title>
+                </meta>
+                <params>
+                    <param name="types" value="video" />
+                </params>
+                <tag name="sulu.node.name"/>
+            </property>
+
+        <!-- </section> -->
+
+        <!--<section name="searchbar">-->
+            <!-- <meta>
+                <title lang="en">Barre de recherche</title>
+                <title lang="fr">Barre de recherche</title>
+            </meta> -->
+
+            <property name="taille" colspan="4" type="single_select">
+                <meta>
+                    <title lang="en">Taille</title>
+                    <title lang="fr">Taille</title>
+                </meta>
+
+                <params>
+                    <param name="default_value" value="large"/>
+
+                    <param name="values" type="collection">
+
+                        <param name="normal">
+                            <meta>
+                                <title lang="en">Normal</title>
+                                <title lang="fr">Normal</title>
+                            </meta>
+                        </param>
+
+                        <param name="large">
+                            <meta>
+                                <title lang="en">Large</title>
+                                <title lang="fr">Large</title>
+                            </meta>
+                        </param>
+
+                        <param name="extra_large">
+                            <meta>
+                                <title lang="en">Extra Large</title>
+                                <title lang="fr">Extra Large</title>
+                            </meta>
+                        </param>
+                    </param>
+                </params>
+            </property>
+
+            <property name="number" colspan="8" type="number">
+                <meta>
+                    <title lang="en">Position verticale sur l'image/vidéo (valeur en %)</title>
+                    <title lang="fr">Position verticale sur l'image/vidéo (valeur en %)</title>
+                </meta>
+
+                <params>
+                    <param name="min" value="0"/>
+                    <param name="max" value="100"/>
+                    <param name="step" value="1"/>
+                    <param name="multiple_of" value="1"/>
+                </params>
+            </property>
+
+        <!-- </section> -->
+       <!-- <section name="textblock"> -->
+            <!-- <meta>
+                <title lang="en">Bloc de texte</title>
+                <title lang="fr">Bloc de texte</title>
+            </meta> -->
+
+            <property name="contenu" colspan="12" type="text_editor">
+                <meta>
+                    <title lang="en">Contenu</title>
+                    <title lang="fr">Contenu</title>
+                </meta>
+            </property>
+
+            <property name="libelle_lien" colspan="12" type="text_editor">
+                <meta>
+                    <title lang="en">Libellé du lien</title>
+                    <title lang="fr">Libellé du lien</title>
+                </meta>
+            </property>
+
+            <property name="lien_externe_boolean" colspan="12" type="checkbox">
+                <meta>
+                    <title lang="en">Est un lien externe</title>
+                    <title lang="fr">Est un lien externe</title>
+                </meta>
+            </property>
+
+            <property name="url_interne" colspan="12" type="link">
+                <meta>
+                    <title lang="en">URL Interne</title>
+                    <title lang="fr">URL Interne</title>
+
+                    <info_text lang="en">
+                        Exemple : /compagnies/details?id={id}
+                    </info_text>
+
+                    <info_text lang="fr">
+                        Exemple : /compagnies/details?id={id}   
+                    </info_text>
+                </meta>
+
+            </property> 
+            
+            <property name="texte_hover_link" colspan="12" type="text_line">
+                <meta>
+                    <title lang="en">Texte au survol du lien</title>
+                    <title lang="fr">Texte au survol du lien</title>
+                </meta>
+            </property>
+
+        <!-- </section> -->
+
+        <!-- Paramètres supplémentaires pour l'affichage sur PC -->
+
+         <property name="modele" colspan="4" type="single_select">
+            <meta>
+                <title lang="en">Modèle</title>
+                <title lang="fr">Modèle</title>
+            </meta>
+
+            <params>
+                <param name="default_value" value="avec_video_70_texte_30"/>
+
+                <param name="values" type="collection">
+
+                    <param name="barre_de_recherche_seule">
+                        <meta>
+                            <title lang="en">Barre de recherche seule</title>
+                            <title lang="fr">Barre de recherche seule</title>
+                        </meta>
+                    </param>
+
+                    <param name="avec_image">
+                        <meta>
+                            <title lang="en">Avec image</title>
+                            <title lang="fr">Avec image</title>
+                        </meta>
+                    </param>
+
+                    <param name="avec_video_100">
+                        <meta>
+                            <title lang="en">Avec vidéo 100%</title>
+                            <title lang="fr">Avec vidéo 100%</title>
+                        </meta>
+                    </param>
+
+                    <param name="avec_video_90_texte_10">
+                        <meta>
+                            <title lang="en">Avec vidéo 90% et texte 10%</title>
+                            <title lang="fr">Avec vidéo 90% et texte 10%</title>
+                        </meta>
+                    </param>
+
+                    <param name="avec_video_80_texte_20">
+                        <meta>
+                            <title lang="en">Avec vidéo 80% et texte 20%</title>
+                            <title lang="fr">Avec vidéo 80% et texte 20%</title>
+                        </meta>
+                    </param>
+
+                    <param name="avec_video_70_texte_30">
+                        <meta>
+                            <title lang="en">Avec vidéo 70% et texte 30%</title>
+                            <title lang="fr">Avec vidéo 70% et texte 30%</title>
+                        </meta>
+                    </param>
+
+                    <param name="avec_video_60_texte_40">
+                        <meta>
+                            <title lang="en">Avec vidéo 60% et texte 40%</title>
+                            <title lang="fr">Avec vidéo 60% et texte 40%</title>
+                        </meta>
+                    </param>
+                </param>
+            </params>
+        </property>
+
+        <property name="hauteur_image_video" colspan="4" type="number">
+            <meta>
+                <title lang="en">Hauteur de l'image/vidéo (valeur en px)</title>
+                <title lang="fr">Hauteur de l'image/vidéo (valeur en px)</title>
+
+                 <info_text lang="en">
+                        Par défaut : 400px
+                    </info_text>
+
+                    <info_text lang="fr">
+                        Par défaut : 400px
+                    </info_text>
+            </meta>
+
+            <params>
+                <param name="min" value="0"/>
+                <param name="max" value="1000"/>
+                <param name="step" value="1"/>
+                <param name="multiple_of" value="1"/>
+            </params>
+        </property>
+
+        <property name="afficher_bloc_texte" colspan="4" type="checkbox">
+            <meta>
+                <title lang="en">Afficher le bloc de texte</title>
+                <title lang="fr">Afficher le bloc de texte</title>
+            </meta>
+
+            <params>
+                <param name="type" value="toggler" />
+                <param name="default_value" value="true" />
+                <param name="label">
+                    <meta>
+                        <title lang="en">Oui / Non</title>
+                        <title lang="fr">Oui / Non</title>
+                    </meta>
+                </param>
+            </params>
+        </property>
+
+        <property name="afficher_arriere_plan" colspan="4" type="checkbox">
+            <meta>
+                <title lang="en">Afficher l'arrière plan</title>
+                <title lang="fr">Afficher l'arrière plan</title>
+
+                 <info_text lang="en">
+                        Si valeur à "Non", l'arrière plan sera transparent
+                    </info_text>
+
+                    <info_text lang="fr">
+                        Si valeur à "Non", l'arrière plan sera transparent
+                    </info_text>
+
+            </meta>
+
+            <params>
+                <param name="type" value="toggler" />
+                <param name="default_value" value="false" />
+                <param name="label">
+                    <meta>
+                        <title lang="en">Oui / Non</title>
+                        <title lang="fr">Oui / Non</title>
+                    </meta>
+                </param>
+            </params>
+        </property>
+
+        <property name="couleur_arriere_plan" colspan="4" type="color">
+            <meta>
+                <title lang="en">Couleur de l'arrière plan</title>
+                <title lang="fr">Couleur de l'arrière plan</title>
+
+                <info_text lang="en">
+                    Par défaut : #004461
+                </info_text>
+
+                <info_text lang="fr">
+                    Par défaut : #004461
+                </info_text>
+            </meta>
+
+            <params>
+                <param name="default_value" value="#004461" />
+            </params>
+        </property>
+
+        <property name="opacite_arriere_plan"  colspan="3" type="number">
+            <meta>
+                <title lang="en">Opacité de l'arrière plan (valeur en %)</title>
+                <title lang="fr">Opacité de l'arrière plan (valeur en %)</title>
+
+                <info_text lang="en">
+                    Par défaut : 100
+                </info_text>
+
+                <info_text lang="fr">
+                    Par défaut : 100
+                </info_text>
+            </meta>
+            <params>
+                <param name="min" value="0"/>
+                <param name="max" value="100"/>
+                <param name="step" value="1"/>
+                <param name="multiple_of" value="1"/>
+            </params>
+        </property>
+
+        <property name="afficher_bordure" colspan="3" type="checkbox">
+            <meta>
+                <title lang="en">Afficher la bordure</title>
+                <title lang="en">Afficher la bordure</title>
+            </meta>
+
+            <params>
+                <param name="type" value="toggler" />
+                <param name="default_value" value="false" />
+                <param name="label">
+                    <meta>
+                        <title lang="en">Oui / Non</title>
+                        <title lang="fr">Oui / Non</title>
+                    </meta>
+                </param>
+            </params>
+        </property>
+
+        <property name="couleur_bordure" colspan="3" type="color">
+            <meta>
+                <title lang="en">Couleur de la bordure</title>
+                <title lang="fr">Couleur de la bordure</title>
+
+                  <info_text lang="en">
+                    Par défaut : #ffffff
+                </info_text>
+
+                <info_text lang="fr">
+                    Par défaut : #ffffff
+                </info_text>
+            </meta>
+            <params>    
+                <param name="default_value" value="#ffffff" />      
+            </params>
+        </property>
+
+        <property name="epaisseur_bordure" colspan="3" type="number">
+            <meta>
+                    <title lang="en">Epaisseur de la bordure (en px)</title>
+                    <title lang="fr">Epaisseur de la bordure (en px)</title>
+
+                    <info_text lang="en">
+                        Par défaut : 2
+                    </info_text>
+
+                    <info_text lang="fr">
+                        Par défaut : 2
+                    </info_text>
+            </meta>
+            <params>
+                <param name="min" value="0"/>
+                <param name="max" value="5"/>
+                <param name="step" value="1"/>
+                <param name="multiple_of" value="1"/>
+            </params>
+        </property>
+
+        <property name="arrondi_bordure" colspan="3" type="number">
+            <meta>
+                    <title lang="en">Arrondi de la bordure (en px)</title>
+                    <title lang="fr">Arrondi de la bordure (en px)</title>
+
+                    <info_text lang="en">
+                        Par défaut : 30
+                    </info_text>
+
+                    <info_text lang="fr">
+                        Par défaut : 30
+                    </info_text>
+            </meta>
+            <params>
+                <param name="min" value="0"/>
+                <param name="max" value="50"/>
+                <param name="step" value="1"/>
+                <param name="multiple_of" value="1"/>
+            </params>
+        </property>
+
+
+        <property name="padding_top" colspan="3" type="number">
+            <meta>
+                    <title lang="en">Padding Top (en px)</title>
+                    <title lang="fr">Padding Top(en px)</title>
+
+                    <info_text lang="en">
+                        Par défaut : 25
+                    </info_text>
+
+                    <info_text lang="fr">
+                        Par défaut : 25
+                    </info_text>
+            </meta>
+            <params>
+                <param name="min" value="0"/>
+                <param name="max" value="50"/>
+                <param name="step" value="1"/>
+                <param name="multiple_of" value="1"/>
+            </params>
+        </property>
+
+        <property name="padding_right" colspan="3" type="number">
+            <meta>
+                    <title lang="en">Padding Right (en px)</title>
+                    <title lang="fr">Padding Right (en px)</title>
+
+                    <info_text lang="en">
+                        Par défaut : 25
+                    </info_text>
+
+                    <info_text lang="fr">
+                        Par défaut : 25
+                    </info_text>
+            </meta>
+            <params>
+                <param name="min" value="0"/>
+                <param name="max" value="50"/>
+                <param name="step" value="1"/>
+                <param name="multiple_of" value="1"/>
+            </params>
+        </property>
+
+
+        <property name="padding_bottom" colspan="3" type="number">
+            <meta>
+                    <title lang="en">Padding Bottom (en px)</title>
+                    <title lang="fr">Padding Bottom (en px)</title>
+
+                    <info_text lang="en">
+                        Par défaut : 25
+                    </info_text>
+
+                    <info_text lang="fr">
+                        Par défaut : 25
+                    </info_text>
+            </meta>
+            <params>
+                <param name="min" value="0"/>
+                <param name="max" value="50"/>
+                <param name="step" value="1"/>
+                <param name="multiple_of" value="1"/>
+            </params>
+        </property>
+
+
+        <property name="padding_left" colspan="3" type="number">
+            <meta>
+                    <title lang="en">Padding Left (en px)</title>
+                    <title lang="fr">Padding Left (en px)</title>
+
+                    <info_text lang="en">
+                        Par défaut : 25
+                    </info_text>
+
+                    <info_text lang="fr">
+                        Par défaut : 25
+                    </info_text>
+            </meta>
+            <params>
+                <param name="min" value="0"/>
+                <param name="max" value="50"/>
+                <param name="step" value="1"/>
+                <param name="multiple_of" value="1"/>
+            </params>
+        </property>
+
+
+        <property name="margin_top" colspan="3" type="number">
+            <meta>
+                    <title lang="en">Margin Top (en px)</title>
+                    <title lang="fr">Margin Top (en px)</title>
+
+                    <info_text lang="en">
+                        Par défaut : 30
+                    </info_text>
+
+                    <info_text lang="fr">
+                        Par défaut : 30
+                    </info_text>
+            </meta>
+            <params>
+                <param name="min" value="0"/>
+                <param name="max" value="50"/>
+                <param name="step" value="1"/>
+                <param name="multiple_of" value="1"/>
+            </params>
+        </property>
+
+
+        <property name="margin_right" colspan="3" type="number">
+            <meta>
+                    <title lang="en">Margin Right (en px)</title>
+                    <title lang="fr">Margin Right (en px)</title>
+
+                    <info_text lang="en">
+                        Par défaut : 30
+                    </info_text>
+
+                    <info_text lang="fr">
+                        Par défaut : 30
+                    </info_text>
+            </meta>
+            <params>
+                <param name="min" value="0"/>
+                <param name="max" value="50"/>
+                <param name="step" value="1"/>
+                <param name="multiple_of" value="1"/>
+            </params>
+        </property>
+
+
+        <property name="margin_bottom" colspan="3" type="number">
+            <meta>
+                    <title lang="en">Margin Bottom (en px)</title>
+                    <title lang="fr">Margin Bottom (en px)</title>
+
+                    <info_text lang="en">
+                        Par défaut : 30
+                    </info_text>
+
+                    <info_text lang="fr">
+                        Par défaut : 30
+                    </info_text>
+            </meta>
+            <params>
+                <param name="min" value="0"/>
+                <param name="max" value="50"/>
+                <param name="step" value="1"/>
+                <param name="multiple_of" value="1"/>
+            </params>
+        </property>
+
+
+        <property name="margin_left" colspan="3" type="number">
+            <meta>
+                    <title lang="en">Margin Left (en px)</title>
+                    <title lang="fr">Margin Left (en px)</title>
+
+                    <info_text lang="en">
+                        Par défaut : 30
+                    </info_text>
+
+                    <info_text lang="fr">
+                        Par défaut : 30
+                    </info_text>
+            </meta>
+            <params>
+                <param name="min" value="0"/>
+                <param name="max" value="50"/>
+                <param name="step" value="1"/>
+                <param name="multiple_of" value="1"/>
+            </params>
+        </property>
+
+
+    </properties>
+
+</template>

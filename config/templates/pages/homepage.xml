@@ -29,18 +29,53 @@
 
         <property name="url" type="resource_locator" mandatory="true">
             <meta>
-                <title lang="en">Resourcelocator</title>
+                <title lang="en">Adresse</title>
                 <title lang="fr">Adresse</title>
             </meta>
 
             <tag name="sulu.rlp"/>
         </property>
 
-        <property name="article" type="text_editor">
+        <property name="article" type="checkbox">
             <meta>
-                <title lang="en">Article</title>
-                <title lang="fr">Article</title>
+                <title lang="en">Cacher la barre de recherche</title>
+                <title lang="fr">Cacher la barre de recherch</title>
             </meta>
         </property>
+
+        <property name="carousel" type="snippet_selection">
+            <meta>
+                <title lang="en">Fragment de la barre de recherche</title>
+                <title lang="fr">Fragment de la barre de recherch</title>
+            </meta>
+        </property>
+
+         <property name="croisieres-coup-de-coeur" type="snippet_selection">
+            <meta>
+                <title lang="en">Ajouter une liste de croisières coup de coeur</title>
+                <title lang="fr">Ajouter une liste de croisières coup de coeur</title>
+            </meta>
+        </property>
+
+         <property name="bas-de-page" type="snippet_selection">
+            <meta>
+                <title lang="en">Fragment de pied de page</title>
+                <title lang="fr">Fragment de pied de page</title>
+            </meta>
+        </property>
+
+         <property name="carte" type="snippet_selection">
+            <meta>
+                <title lang="en">Fragments de carte</title>
+                <title lang="fr">Fragments de carte</title>
+            </meta>
+            <params>
+                <param name="ligne1" value="" />
+                <param name="ligne2" value="" />
+                <param name="ligne3" value="" />
+                <param name="ligne4" value="" />
+            </params>
+        </property>
+
     </properties>
 </template>
